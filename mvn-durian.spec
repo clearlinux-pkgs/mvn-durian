@@ -4,9 +4,15 @@
 #
 Name     : mvn-durian
 Version  : 1.2.0
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0-sources.jar
 Source0  : https://repo1.maven.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0-sources.jar
+Source1  : https://repo1.maven.org/maven2/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.jar
+Source2  : https://repo1.maven.org/maven2/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.pom
+Source3  : https://repo1.maven.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.jar
+Source4  : https://repo1.maven.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.pom
+Source5  : https://repo1.maven.org/maven2/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.jar
+Source6  : https://repo1.maven.org/maven2/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -32,10 +38,34 @@ data components for the mvn-durian package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0-sources.jar
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-collect/1.2.0
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-collect/1.2.0
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-io/1.2.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-io/1.2.0
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.pom
+
 
 %files
 %defattr(-,root,root,-)
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.jar
+/usr/share/java/.m2/repository/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.pom
 /usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0-sources.jar
+/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.jar
+/usr/share/java/.m2/repository/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.pom
+/usr/share/java/.m2/repository/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.jar
+/usr/share/java/.m2/repository/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.pom
